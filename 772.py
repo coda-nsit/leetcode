@@ -8,6 +8,9 @@ is_digit = lambda x: ord('0') <= ord(x) <= ord('9')
 #     2. if stack top is * or / do the arithmatic
 #     3. if stack top is + or - push the element
 # 3. if operator then push
+# at the end the stack will contain only numbers and + and -
+# the normal technique won't work here i.e. pop 3 items operate and push back, consider the case [0, +, 56, -, 30, +, 0, -, 2]
+# hence pop 2 elements at a time
 class Solution:
     def operate(self, op1, op2, operator):
         if operator == '*':
@@ -95,4 +98,3 @@ class Solution:
 # "0"
 # "1*2-3/4+5*6-7*8+9/10"
 # "(0-3)/4"
-                
