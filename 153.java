@@ -1,3 +1,5 @@
+// Solved it myself. Just be patient and solve.
+// In sorted rotated case always split the array in 2 parts based on which subarray is sorted.
 class Solution {
     private boolean isMidSmallest(int[] nums, int mid) {
         if (nums.length == 1) {
