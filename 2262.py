@@ -40,5 +40,3 @@ class Solution:
                 dp[i] = dp[i - 1] + i - lastOccurence[s[i]]
             lastOccurence[s[i]] = i
         return sum(dp)
-                    
-                
