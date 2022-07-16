@@ -1,11 +1,11 @@
 # 2D array
 twoDList = [[0] * ncols for i in range(nrows)]
 
-# 3D array
-i = 2
-j = 4
-k = 8
-print([[[0]*i]*j]*k)
+# 3D array: create k matrics of dimension r * c
+r = 2
+c = 8
+k = 3
+print([ [ [0] * c ] * r ] * k)
 """
 [
     [[0, 0], [0, 0], [0, 0], [0, 0]], 
