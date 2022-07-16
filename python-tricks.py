@@ -5,5 +5,5 @@ twoDList = [[0] * ncols for i in range(nrows)]
 r = 2
 c = 8
 k = 3
-mat = [ [ [0] * k ] * c ] * r
+mat = [[[0] * k for i in range(c)] for _ in range(r)]
 print(mat[r - 1][c - 1][k - 1])
