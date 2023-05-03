@@ -74,7 +74,6 @@ class Solution {
         {
             return left;
         }
-        // System.out.println("*****");
         return binarySearch(mountainArr, inflectionIndex + 1, mountainArr.length() - 1, target, true);
     }
 }
