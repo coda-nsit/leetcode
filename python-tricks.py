@@ -22,6 +22,7 @@ class CustomComparator:
             return -1
         idxX = self.order[x]
         idxY = self.order[y]
+        # since sorting in accessing order if x appears before y, return -1
         if idxX < idxY:
             return -1
         elif idxX > idxY:
