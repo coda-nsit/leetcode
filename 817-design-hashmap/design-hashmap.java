@@ -1,3 +1,9 @@
+/**
+1. Standard HashMap algo with a array + DLL
+2. In the Dll I create a dummy head and tail to ease edge cases.
+3. Look at the code, its self explainatory
+4. The array size is max randomMod (643) after which there will be collisions.
+ */
 class DllNode {
     public int key;
     public int value;
@@ -23,6 +29,8 @@ class MyHashMap {
         for (int i = 0; i < randomMod; ++i) {
             var headNode = new DllNode(-1, -1);
             var tailNode = new DllNode(-1, -1);
+            
+            // hook the head and tail nodes
             hashMap[i] = headNode;
             hashMap[i].right = tailNode;
             tailNode.left = hashMap[i];
@@ -45,7 +53,6 @@ class MyHashMap {
         modKey = key % randomMod;
         DllNode dll = hashMap[modKey].right; // first node is head
         while (dll.key != -1) {
-            // System.out.println("***** " + dll.key + " " + key + " *****");
             if (dll.key == key) {
                 dll.value = value;
                 return;
