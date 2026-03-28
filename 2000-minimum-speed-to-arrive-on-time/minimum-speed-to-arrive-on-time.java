@@ -1,3 +1,8 @@
+/**
+Author: @Rishab Banerjee
+
+Standard binary search.
+ */
 class Solution {
     private boolean isPossible(int[] dist, double maxHour, int speed) {
         double hourTaken;
