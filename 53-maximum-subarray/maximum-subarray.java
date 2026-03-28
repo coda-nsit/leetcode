@@ -1,7 +1,8 @@
 /**
 Author: @Rishab Banerjee
 
-Standard Kadane.
+Standard Kadane but here even if all elements are negative we return the max value instead of 0.
+For that we keep track of any non-negative element being present in the array using nonNegPresent.
  */
 class Solution {
     public int maxSubArray(int[] nums) {
@@ -18,6 +19,7 @@ class Solution {
             if (currMax < 0) {
                 currMax = 0;
             }
+            // Compare with currMax only if some non-negative number is present or else currMax = 0 and maxi will become 0, even if all elements in nums are negative.
             if (nonNegPresent) {
                 maxi = Math.max(currMax, maxi);
             } else {
